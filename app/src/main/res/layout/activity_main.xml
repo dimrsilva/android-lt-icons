@@ -23,4 +23,11 @@
         android:layout_height="wrap_content"
         android:text="Mutate"
         />
+
+    <Button
+        android:id="@+id/btn_multiple_resources"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Multiple Resources"
+        />
 </LinearLayout>

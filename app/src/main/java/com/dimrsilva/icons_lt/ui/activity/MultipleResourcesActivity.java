@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 import com.dimrsilva.icons_lt.R;
 
-public class MutateActivity extends AppCompatActivity {
+public class MultipleResourcesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +21,13 @@ public class MutateActivity extends AppCompatActivity {
 
         for (int i = 0; i < 20000; i++) {
             ImageView imageView = new ImageView(this);
-            Drawable drawable = DrawableCompat.wrap(ContextCompat.getDrawable(this, R.drawable.ic_account_circle));
-            drawable.mutate();
+            Drawable drawable;
             if (i % 3 == 0) {
-                DrawableCompat.setTint(drawable, ContextCompat.getColor(this, R.color.red));
+                drawable = ContextCompat.getDrawable(this, R.drawable.ic_account_circle_red);
             } else if (i % 3 == 1){
-                DrawableCompat.setTint(drawable, ContextCompat.getColor(this, R.color.green));
+                drawable = ContextCompat.getDrawable(this, R.drawable.ic_account_circle_green);
             } else {
-                DrawableCompat.setTint(drawable, ContextCompat.getColor(this, R.color.blue));
+                drawable = ContextCompat.getDrawable(this, R.drawable.ic_account_circle_blue);
             }
 
             imageView.setImageDrawable(drawable);

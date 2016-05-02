@@ -19,7 +19,7 @@ public class NoMutateActivity extends AppCompatActivity {
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
 
-        for (int i = 0; i < 2000; i++) {
+        for (int i = 0; i < 20000; i++) {
             ImageView imageView = new ImageView(this);
             Drawable drawable = DrawableCompat.wrap(ContextCompat.getDrawable(this, R.drawable.ic_account_circle));
             if (i % 3 == 0) {

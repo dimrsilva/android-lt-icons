@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.activity.NoMutateActivity" />
-        <activity android:name=".ui.activity.MutateActivity"></activity>
+        <activity android:name=".ui.activity.MutateActivity" />
+        <activity android:name=".ui.activity.MultipleResourcesActivity"></activity>
     </application>
 
 </manifest>
