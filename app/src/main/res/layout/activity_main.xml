@@ -30,4 +30,11 @@
         android:layout_height="wrap_content"
         android:text="Multiple Resources"
         />
+
+    <Button
+        android:id="@+id/btn_cached_drawable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cached Drawable"
+        />
 </LinearLayout>

@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 import com.dimrsilva.icons_lt.R;
 
-public class NoMutateActivity extends AppCompatActivity {
+public class CachedDrawableActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,15 +19,27 @@ public class NoMutateActivity extends AppCompatActivity {
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
 
+        Drawable drawableRed = ContextCompat.getDrawable(this, R.drawable.ic_account_circle);
+        drawableRed.mutate();
+        DrawableCompat.setTint(drawableRed, ContextCompat.getColor(this, R.color.red));
+
+        Drawable drawableGreen = ContextCompat.getDrawable(this, R.drawable.ic_account_circle);
+        drawableGreen.mutate();
+        DrawableCompat.setTint(drawableGreen, ContextCompat.getColor(this, R.color.green));
+
+        Drawable drawableBlue = ContextCompat.getDrawable(this, R.drawable.ic_account_circle);
+        drawableBlue.mutate();
+        DrawableCompat.setTint(drawableBlue, ContextCompat.getColor(this, R.color.blue));
+
         for (int i = 0; i < MainActivity.IMAGE_VIEWS_COUNT; i++) {
             ImageView imageView = new ImageView(this);
-            Drawable drawable = DrawableCompat.wrap(ContextCompat.getDrawable(this, R.drawable.ic_account_circle));
+            Drawable drawable;
             if (i % 3 == 0) {
-                DrawableCompat.setTint(drawable, ContextCompat.getColor(this, R.color.red));
+                drawable = drawableRed;
             } else if (i % 3 == 1){
-                DrawableCompat.setTint(drawable, ContextCompat.getColor(this, R.color.green));
+                drawable = drawableGreen;
             } else {
-                DrawableCompat.setTint(drawable, ContextCompat.getColor(this, R.color.blue));
+                drawable = drawableBlue;
             }
 
             imageView.setImageDrawable(drawable);

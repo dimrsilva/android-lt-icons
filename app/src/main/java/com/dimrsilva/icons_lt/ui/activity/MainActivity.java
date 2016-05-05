@@ -9,6 +9,8 @@ import com.dimrsilva.icons_lt.R;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final int IMAGE_VIEWS_COUNT = 20000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, MultipleResourcesActivity.class));
+            }
+        });
+
+        findViewById(R.id.btn_cached_drawable).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CachedDrawableActivity.class));
             }
         });
     }

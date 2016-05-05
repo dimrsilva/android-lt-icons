@@ -19,7 +19,7 @@ public class MultipleResourcesActivity extends AppCompatActivity {
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
 
-        for (int i = 0; i < 20000; i++) {
+        for (int i = 0; i < MainActivity.IMAGE_VIEWS_COUNT; i++) {
             ImageView imageView = new ImageView(this);
             Drawable drawable;
             if (i % 3 == 0) {

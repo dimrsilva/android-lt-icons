@@ -19,7 +19,7 @@ public class MutateActivity extends AppCompatActivity {
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
 
-        for (int i = 0; i < 20000; i++) {
+        for (int i = 0; i < MainActivity.IMAGE_VIEWS_COUNT; i++) {
             ImageView imageView = new ImageView(this);
             Drawable drawable = DrawableCompat.wrap(ContextCompat.getDrawable(this, R.drawable.ic_account_circle));
             drawable.mutate();
