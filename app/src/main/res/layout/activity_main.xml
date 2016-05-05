@@ -11,6 +11,13 @@
     tools:context="com.dimrsilva.icons_lt.ui.activity.MainActivity">
 
     <Button
+        android:id="@+id/btn_xml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xml tint"
+        />
+
+    <Button
         android:id="@+id/btn_no_mutate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

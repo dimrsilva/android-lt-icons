@@ -19,15 +19,15 @@ public class CachedDrawableActivity extends AppCompatActivity {
 
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.linear_layout);
 
-        Drawable drawableRed = ContextCompat.getDrawable(this, R.drawable.ic_account_circle);
+        Drawable drawableRed = DrawableCompat.wrap(ContextCompat.getDrawable(this, R.drawable.ic_account_circle));
         drawableRed.mutate();
         DrawableCompat.setTint(drawableRed, ContextCompat.getColor(this, R.color.red));
 
-        Drawable drawableGreen = ContextCompat.getDrawable(this, R.drawable.ic_account_circle);
+        Drawable drawableGreen = DrawableCompat.wrap(ContextCompat.getDrawable(this, R.drawable.ic_account_circle));
         drawableGreen.mutate();
         DrawableCompat.setTint(drawableGreen, ContextCompat.getColor(this, R.color.green));
 
-        Drawable drawableBlue = ContextCompat.getDrawable(this, R.drawable.ic_account_circle);
+        Drawable drawableBlue = DrawableCompat.wrap(ContextCompat.getDrawable(this, R.drawable.ic_account_circle));
         drawableBlue.mutate();
         DrawableCompat.setTint(drawableBlue, ContextCompat.getColor(this, R.color.blue));
 
